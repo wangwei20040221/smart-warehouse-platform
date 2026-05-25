@@ -1,0 +1,44 @@
+# 需要排除的构建产物
+**/target/
+**/node_modules/
+**/dist/
+
+# IDE 配置
+.idea/
+*.iml
+.vscode/
+
+# 系统文件
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# 日志文件
+logs/
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*~
+*.lck
+
+# Claude
+.claude/
+
+# Redis & Erlang
+dump.rdb
+erl_crash.dump
+
+# Maven
+**/bin/
+**/bin/target/
+
+# 环境变量（不要提交敏感信息）
+.env
+.env.local
+.env.*.local
+
+# 测试报告
+**/surefire-reports/

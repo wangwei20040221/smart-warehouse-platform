@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell.exe -Command \"[System.Environment]::SetEnvironmentVariable\\('NVM_HOME', 'd:\\\\nvm', [System.EnvironmentVariableTarget]::User\\)\")",
+      "Bash(powershell.exe -Command \"[System.Environment]::SetEnvironmentVariable\\('NVM_SYMLINK', 'C:\\\\dev\\\\nodejs', [System.EnvironmentVariableTarget]::User\\)\")",
+      "Bash(powershell.exe -Command '$p = [Environment]::GetEnvironmentVariable\\(\"Path\", \"User\"\\); if \\($p -notlike \"*nvm*\"\\) { $newPath = $p + \";%NVM_HOME%;%NVM_SYMLINK%\"; [Environment]::SetEnvironmentVariable\\(\"Path\", $newPath, \"User\"\\); Write-Output \"PATH updated successfully\"; Write-Output $newPath } else { Write-Output \"NVM paths already in PATH\"; Write-Output $p }')",
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(grep -i \"filter\\\\|error\\\\|cause\\\\|FAIL\" /d/jeecg-boot/jeecg-boot.log 2>&1 | head -30)",
+      "Read(//d/jeecg-boot/**)",
+      "Bash(mysql --protocol=tcp -u root -p\"wang123.\" jeecg-boot)",
+      "Bash(MSYS_NO_PATHCONV=1 docker cp jeecg-boot-system:\"/jeecg-boot/jeecg-boot-module/jeecg-module/src/main/java/org/jeecg/modules/demo/com/jeecg/wms/.\" \"C:/Users/王伟/Desktop/123/wms/\")",
+      "Read(//c/Users/王伟/Desktop/123/wms/**)",
+      "Bash(ls \"C:\\\\Users\\\\王伟\\\\AppData\\\\Roaming\\\\Code\\\\User\\\\workspaceStorage\" 2>/dev/null | head -5; echo \"---\"; ls \"C:\\\\Users\\\\王伟\\\\.vscode\\\\extensions\" 2>/dev/null | grep -i java | head -10)",
+      "Read(//c/Users/王伟/AppData/Roaming/Code/User/workspaceStorage/**)",
+      "Read(//c/Users/王伟/.vscode/extensions/**)",
+      "Bash(powershell -Command \"Get-ChildItem -Path 'C:\\\\Program Files\\\\MySQL\\\\', 'C:\\\\Program Files \\(x86\\)\\\\MySQL\\\\' -Recurse -Filter 'mysql.exe' -ErrorAction SilentlyContinue -Depth 2 | Select-Object FullName\")"
+    ],
+    "additionalDirectories": [
+      "D:\\jeecg-boot\\jeecg-boot\\db"
+    ]
+  }
+}
